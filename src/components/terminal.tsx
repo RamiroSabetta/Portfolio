@@ -48,11 +48,36 @@ const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán aqu
 const ContactContent = () => <p className="mt-1">Puedes contactarme en: <a href="mailto:ramiro.sabetta.dev@gmail.com" className="underline">ramiro.sabetta.dev@gmail.com</a></p>;
 const SkillsContent = () => (
     <div className="mt-1">
-        <p><span className="font-bold text-primary">Lenguajes de Programación:</span> Python, Java, JavaScript, TypeScript, PHP, HTML5, CSS3.</p>
-        <p><span className="font-bold text-primary">Herramientas y Entornos:</span> Git, GitHub, Visual Studio Code, Eclipse IDE, Postman, Vite, WordPress, Azure DevOps, Apache Server, Filezilla, Node.js.</p>
-        <p><span className="font-bold text-primary">Frameworks y Librerías:</span> React.js, Bootstrap, NiceGUI, Bulma.</p>
-        <p><span className="font-bold text-primary">Bases de Datos:</span> MySQL, MongoDB.</p>
-        <p><span className="font-bold text-primary">Sistemas Operativos:</span> Windows, GNU/Linux.</p>
+        <div>
+            <p className="font-bold text-primary">Frontend:</p>
+            <ul className="list-disc list-inside">
+                <li>HTML5, CSS3, JavaScript (ES6+), TypeScript</li>
+                <li>React.js</li>
+                <li>Bootstrap, Bulma</li>
+                <li>NiceGUI</li>
+            </ul>
+        </div>
+        <div className="mt-2">
+            <p className="font-bold text-primary">Backend:</p>
+            <ul className="list-disc list-inside">
+                <li>Python, Java, PHP</li>
+                <li>Node.js</li>
+                <li>MySQL, MongoDB</li>
+                <li>Apache Server</li>
+                <li>NiceGUI</li>
+            </ul>
+        </div>
+        <div className="mt-2">
+            <p className="font-bold text-primary">Herramientas & Otros:</p>
+            <ul className="list-disc list-inside">
+                <li>Git, GitHub</li>
+                <li>Visual Studio Code, Eclipse IDE</li>
+                <li>Postman</li>
+                <li>Vite, WordPress</li>
+                <li>Azure DevOps, Filezilla</li>
+                <li>Windows, GNU/Linux</li>
+            </ul>
+        </div>
     </div>
 );
 
@@ -69,9 +94,11 @@ export function Terminal() {
   }, []);
 
   useEffect(() => {
+    let initialLines: React.ReactNode[] = [];
     const addLine = (index: number) => {
         if(index < welcomeLines.length) {
-            setHistory(prev => [...prev, <p key={`welcome-${index}`} className="whitespace-pre">{welcomeLines[index]}</p>]);
+            initialLines = [...initialLines, <p key={`welcome-${index}`} className="whitespace-pre">{welcomeLines[index]}</p>];
+            setHistory(initialLines);
             setTimeout(() => addLine(index + 1), 75);
         } else {
             setTimeout(() => setIsWelcomeDone(true), 100);
