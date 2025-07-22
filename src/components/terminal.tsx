@@ -5,17 +5,22 @@ import React, { useState, useEffect, useRef } from "react";
 const welcomeLines = [
     "¡Bienvenido a mi Portfolio Terminal!",
     "",
-    "",
-    "",
     "Soy Ramiro Sabetta",
     "Desarrollador de Software",
-    "",
-    "",
     "",
     "Escribe 'help' para ver la lista de comandos disponibles",
     "o 'about' para conocer más sobre mí.",
     "",
 ];
+
+const WelcomeMessage = () => (
+    <>
+        {welcomeLines.map((line, index) => (
+            <p key={`welcome-${index}`} className="whitespace-pre">{line}</p>
+        ))}
+    </>
+);
+
 
 const AboutContent = () => (
   <div className="mt-1">
@@ -75,7 +80,7 @@ export function Terminal() {
     const commandToProcess = command.toLowerCase().trim();
 
     if (commandToProcess === 'clear') {
-        setHistory([]);
+        setHistory([<WelcomeMessage key="welcome-reset" />]);
         return;
     }
 
@@ -128,7 +133,7 @@ export function Terminal() {
       </div>
       
       {isWelcomeDone && (
-        <form onSubmit={handleSubmit} className="flex items-center mt-2">
+        <form onSubmit={handleSubmit} className="flex items-center mt-4">
           <label htmlFor="terminal-input" className="text-primary">visitor@portfolio:~$</label>
           <input
             id="terminal-input"
