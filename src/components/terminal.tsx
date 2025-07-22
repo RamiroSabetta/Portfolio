@@ -104,7 +104,7 @@ export function Terminal() {
     let initialLines: React.ReactNode[] = [];
     const addLine = (index: number) => {
         if(index < welcomeLines.length) {
-            initialLines = [...initialLines, <p key={`welcome-${index}`} className="whitespace-pre">{welcomeLines[index]}</p>];
+            initialLines = [...initialLines, <p key={`welcome-${index}`} className="whitespace-pre">{line}</p>];
             setHistory(initialLines);
             setTimeout(() => addLine(index + 1), 75);
         } else {
