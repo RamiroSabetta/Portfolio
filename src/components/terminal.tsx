@@ -44,7 +44,13 @@ const HelpContent = () => (
 );
 
 const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán here pronto. ¡Vuelve a consultar!</p>;
-const ContactContent = () => <p className="mt-1">Puedes contactarme en: <a href="mailto:ramiro.sabetta.dev@gmail.com" className="underline">ramiro.sabetta.dev@gmail.com</a></p>;
+const ContactContent = () => (
+    <div className="mt-1">
+        <p>Email -&gt; <a href="mailto:sabettaramiro@gmail.com" className="underline">sabettaramiro@gmail.com</a></p>
+        <p>GitHub -&gt; <a href="https://github.com/RamiroSabetta" target="_blank" rel="noopener noreferrer" className="underline">https://github.com/RamiroSabetta</a></p>
+        <p>LinkedIn - &gt; <a href="https://www.linkedin.com/in/ramiro-sabetta-336337324/" target="_blank" rel="noopener noreferrer" className="underline">https://www.linkedin.com/in/ramiro-sabetta-336337324/</a></p>
+    </div>
+);
 const SkillsContent = () => (
     <div className="mt-1">
         <div>
