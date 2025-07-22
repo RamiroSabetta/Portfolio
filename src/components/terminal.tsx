@@ -7,6 +7,7 @@ const welcomeLines = [
     "¡Bienvenido a mi Portfolio Terminal!",
     "",
     "Soy Ramiro Sabetta",
+    "",
     "Desarrollador de Software",
     "",
     "Escribe 'help' para ver la lista de comandos disponibles",
@@ -50,33 +51,29 @@ const SkillsContent = () => (
     <div className="mt-1">
         <div>
             <p className="font-bold text-primary">Frontend:</p>
-            <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, JavaScript (ES6+), TypeScript</li>
-                <li>React.js</li>
-                <li>Bootstrap, Bulma</li>
-                <li>NiceGUI</li>
-            </ul>
+            <p>HTML5, CSS3, JavaScript (ES6+)</p>
+            <p>Bootstrap, Bulma</p>
+            <p>TypeScript</p>
+            <p>React.js</p>
+            <p>Python, NiceGUI</p>
         </div>
         <div className="mt-2">
             <p className="font-bold text-primary">Backend:</p>
-            <ul className="list-disc list-inside">
-                <li>Python, Java, PHP</li>
-                <li>Node.js</li>
-                <li>MySQL, MongoDB</li>
-                <li>Apache Server</li>
-                <li>NiceGUI</li>
-            </ul>
+            <p>Node.js</p>
+            <p>Python</p>
+            <p>Java</p>
+            <p>PHP</p>
+            <p>MySQL</p>
+            <p>MongoDB</p>
         </div>
         <div className="mt-2">
             <p className="font-bold text-primary">Herramientas & Otros:</p>
-            <ul className="list-disc list-inside">
-                <li>Git, GitHub</li>
-                <li>Visual Studio Code, Eclipse IDE</li>
-                <li>Postman</li>
-                <li>Vite, WordPress</li>
-                <li>Azure DevOps, Filezilla</li>
-                <li>Windows, GNU/Linux</li>
-            </ul>
+            <p>Git, GitHub</p>
+            <p>Visual Studio Code, Eclipse IDE</p>
+            <p>Postman</p>
+            <p>Vite, WordPress</p>
+            <p>Azure DevOps, Filezilla</p>
+            <p>Windows, GNU/Linux</p>
         </div>
     </div>
 );
@@ -115,17 +112,17 @@ export function Terminal() {
     let output: React.ReactNode;
     const commandToProcess = command.toLowerCase().trim();
 
-    if (commandToProcess === 'clear') {
-        setHistory([<WelcomeMessage key="welcome-reset" />]);
-        return;
-    }
-
     const commandLine = (
       <div key={`cmd-${history.length}`} className="mt-4">
         <span className="text-primary">visitor@portfolio:~$</span>
         <span className="ml-2">{command}</span>
       </div>
     );
+    
+    if (commandToProcess === 'clear') {
+        setHistory([<WelcomeMessage key="welcome-reset" />]);
+        return;
+    }
     
     switch (commandToProcess) {
       case 'help':
