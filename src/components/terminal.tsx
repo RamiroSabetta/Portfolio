@@ -69,8 +69,10 @@ const SkillsContent = () => (
             <p>Git, GitHub</p>
             <p>VS Code, Eclipse IDE</p>
             <p>Postman</p>
-            <p>Vite, WordPress</p>
-            <p>Azure DevOps, Filezilla</p>
+            <p>Vite</p>
+            <p>WordPress</p>
+            <p>Azure DevOps</p>
+            <p>Filezilla</p>
             <p>Windows, GNU/Linux</p>
         </div>
     </div>
