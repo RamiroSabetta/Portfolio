@@ -6,8 +6,10 @@ import React, { useState, useEffect, useRef } from "react";
 const welcomeLines = [
     "¡Bienvenido a mi Portfolio Terminal!",
     "",
+    "",
     "Soy Ramiro Sabetta",
     "Desarrollador de Software",
+    "",
     "",
     "Escribe 'help' para ver la lista de comandos disponibles",
     "o 'about' para conocer más sobre mí.",
@@ -26,6 +28,9 @@ const WelcomeMessage = () => (
 const AboutContent = () => (
   <div className="mt-1">
     <p>¡Hola, soy Ramiro y tengo 22 años! Me impulsa la búsqueda constante de soluciones eficientes, escalables y con impacto real. Disfruto transformar ideas en sistemas funcionales, combinar lógica con creatividad y mantenerme siempre en evolución dentro del mundo IT.</p>
+    <p className="mt-2">
+        <a href="https://docs.google.com/document/d/1c4HUGdOLbAGaX12CGDCpk-DUQLBMAOHbd1Qzc18FuKo/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline text-primary">Ver CV</a>
+    </p>
   </div>
 );
 
