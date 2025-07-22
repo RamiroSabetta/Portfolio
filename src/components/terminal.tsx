@@ -4,26 +4,21 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const welcomeLines = [
-    "¡Bienvenido a mi Portfolio Terminal!",
-    "",
-    "Soy Ramiro Sabetta",
-    "Desarrollador de Software",
-    "",
-    "Escribe 'help' para ver la lista de comandos disponibles",
-    "o 'about' para conocer más sobre mí.",
-    "",
+    { text: "¡Bienvenido a mi Portfolio Terminal!", className: "" },
+    { text: "", className: "" },
+    { text: "Soy Ramiro Sabetta", className: "pt-2" },
+    { text: "Desarrollador de Software", className: "" },
+    { text: "", className: "" },
+    { text: "Escribe 'help' para ver la lista de comandos disponibles", className: "pt-2" },
+    { text: "o 'about' para conocer más sobre mí.", className: "" },
+    { text: "", className: "" },
 ];
 
 const WelcomeMessage = () => (
     <>
-        {welcomeLines.slice(0, 4).map((line, index) => (
-            <p key={`welcome-${index}`} className="whitespace-pre">{line}</p>
+        {welcomeLines.map((line, index) => (
+            <p key={`welcome-${index}`} className={`whitespace-pre ${line.className}`}>{line.text}</p>
         ))}
-        <div className="pt-2">
-             {welcomeLines.slice(5, 8).map((line, index) => (
-                <p key={`welcome-help-${index}`} className="whitespace-pre">{line}</p>
-            ))}
-        </div>
     </>
 );
 
@@ -121,7 +116,7 @@ export function Terminal() {
     const addLine = (index: number) => {
         if(index < welcomeLines.length) {
             const line = welcomeLines[index];
-            initialLines = [...initialLines, <p key={`welcome-${index}`} className="whitespace-pre">{line}</p>];
+            initialLines = [...initialLines, <p key={`welcome-${index}`} className={`whitespace-pre ${line.className}`}>{line.text}</p>];
             setHistory(initialLines);
             setTimeout(() => addLine(index + 1), 75);
         } else {
