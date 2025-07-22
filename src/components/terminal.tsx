@@ -6,8 +6,10 @@ const welcomeLines = [
   "¡Bienvenido a mi Portfolio Terminal!",
   "",
   "",
+  "",
   "Soy Ramiro Sabetta",
   "Desarrollador de Software",
+  "",
   "",
   "",
   "Escribe 'help' para ver la lista de comandos disponibles",
@@ -119,7 +121,7 @@ export function Terminal() {
       </div>
       
       {isWelcomeDone && (
-        <form onSubmit={handleSubmit} className="flex items-center">
+        <form onSubmit={handleSubmit} className="flex items-center mt-2">
           <label htmlFor="terminal-input" className="text-primary">visitor@portfolio:~$</label>
           <input
             id="terminal-input"
