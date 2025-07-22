@@ -7,7 +7,6 @@ const welcomeLines = [
     "¡Bienvenido a mi Portfolio Terminal!",
     "",
     "Soy Ramiro Sabetta",
-    "",
     "Desarrollador de Software",
     "",
     "Escribe 'help' para ver la lista de comandos disponibles",
@@ -26,8 +25,7 @@ const WelcomeMessage = () => (
 
 const AboutContent = () => (
   <div className="mt-1">
-    <p>¡Hola, soy Ramiro y tengo 22 años! Me impulsa la búsqueda constante de soluciones eficientes, escalables y con impacto real.</p>
-    <p>Disfruto transformar ideas en sistemas funcionales, combinar lógica con creatividad y mantenerme siempre en evolución dentro del mundo IT.</p>
+    <p>¡Hola, soy Ramiro y tengo 22 años! Me impulsa la búsqueda constante de soluciones eficientes, escalables y con impacto real. Disfruto transformar ideas en sistemas funcionales, combinar lógica con creatividad y mantenerme siempre en evolución dentro del mundo IT.</p>
   </div>
 );
 
@@ -45,7 +43,7 @@ const HelpContent = () => (
     </div>
 );
 
-const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán aquí pronto. ¡Vuelve a consultar!</p>;
+const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán here pronto. ¡Vuelve a consultar!</p>;
 const ContactContent = () => <p className="mt-1">Puedes contactarme en: <a href="mailto:ramiro.sabetta.dev@gmail.com" className="underline">ramiro.sabetta.dev@gmail.com</a></p>;
 const SkillsContent = () => (
     <div className="mt-1">
@@ -69,7 +67,7 @@ const SkillsContent = () => (
         <div className="mt-2">
             <p className="font-bold text-primary">Herramientas & Otros:</p>
             <p>Git, GitHub</p>
-            <p>Visual Studio Code, Eclipse IDE</p>
+            <p>VS Code, Eclipse IDE</p>
             <p>Postman</p>
             <p>Vite, WordPress</p>
             <p>Azure DevOps, Filezilla</p>
