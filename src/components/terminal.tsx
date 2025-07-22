@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -45,7 +46,15 @@ const HelpContent = () => (
 
 const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán aquí pronto. ¡Vuelve a consultar!</p>;
 const ContactContent = () => <p className="mt-1">Puedes contactarme en: <a href="mailto:ramiro.sabetta.dev@gmail.com" className="underline">ramiro.sabetta.dev@gmail.com</a></p>;
-const SkillsContent = () => <p className="mt-1">Mis habilidades se listarán aquí pronto. ¡Vuelve a consultar!</p>;
+const SkillsContent = () => (
+    <div className="mt-1">
+        <p><span className="font-bold text-primary">Lenguajes de Programación:</span> Python, Java, JavaScript, TypeScript, PHP, HTML5, CSS3.</p>
+        <p><span className="font-bold text-primary">Herramientas y Entornos:</span> Git, GitHub, Visual Studio Code, Eclipse IDE, Postman, Vite, WordPress, Azure DevOps, Apache Server, Filezilla, Node.js.</p>
+        <p><span className="font-bold text-primary">Frameworks y Librerías:</span> React.js, Bootstrap, NiceGUI, Bulma.</p>
+        <p><span className="font-bold text-primary">Bases de Datos:</span> MySQL, MongoDB.</p>
+        <p><span className="font-bold text-primary">Sistemas Operativos:</span> Windows, GNU/Linux.</p>
+    </div>
+);
 
 
 export function Terminal() {
