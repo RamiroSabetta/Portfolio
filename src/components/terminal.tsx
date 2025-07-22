@@ -57,17 +57,17 @@ const ProjectsContent = () => (
         <div className="mt-2">
             <p>1. Landing Page Hostinger</p>
             <div className="pl-4">
-                <p>Repo: <a href="https://github.com/RamiroSabetta/LandingPageHostinger" target="_blank" rel="noopener noreferrer" className="underline">https://github.com/RamiroSabetta/LandingPageHostinger</a></p>
-                <p>Web: <a href="https://ramirosabetta.github.io/LandingPageHostinger/" target="_blank" rel="noopener noreferrer" className="underline">Landing Page Hostinger</a></p>
+                <p>Repo: <a href="https://github.com/RamiroSabetta/LandingPageHostinger" target="_blank" rel="noopener noreferrer" className="underline text-primary">https://github.com/RamiroSabetta/LandingPageHostinger</a></p>
+                <p>Web: <a href="https://ramirosabetta.github.io/LandingPageHostinger/" target="_blank" rel="noopener noreferrer" className="underline text-primary">Landing Page Hostinger</a></p>
             </div>
         </div>
     </div>
 );
 const ContactContent = () => (
     <div className="mt-1">
-        <p>Email -&gt; <a href="mailto:sabettaramiro@gmail.com" className="underline">sabettaramiro@gmail.com</a></p>
-        <p>GitHub -&gt; <a href="https://github.com/RamiroSabetta" target="_blank" rel="noopener noreferrer" className="underline">https://github.com/RamiroSabetta</a></p>
-        <p>LinkedIn -&gt; <a href="https://www.linkedin.com/in/ramiro-sabetta-336337324/" target="_blank" rel="noopener noreferrer" className="underline">https://www.linkedin.com/in/ramiro-sabetta-336337324/</a></p>
+        <p>Email -&gt; <a href="mailto:sabettaramiro@gmail.com" className="underline text-primary">sabettaramiro@gmail.com</a></p>
+        <p>GitHub -&gt; <a href="https://github.com/RamiroSabetta" target="_blank" rel="noopener noreferrer" className="underline text-primary">https://github.com/RamiroSabetta</a></p>
+        <p>LinkedIn -&gt; <a href="https://www.linkedin.com/in/ramiro-sabetta-336337324/" target="_blank" rel="noopener noreferrer" className="underline text-primary">https://www.linkedin.com/in/ramiro-sabetta-336337324/</a></p>
     </div>
 );
 const SkillsContent = () => (
@@ -97,8 +97,7 @@ const SkillsContent = () => (
             <p>Postman</p>
             <p>Vite</p>
             <p>WordPress</p>
-            <p>Azure DevOps</p>
-            <p>Filezilla</p>
+            <p>Azure DevOps, Filezilla</p>
             <p>MS-Windows, GNU/Linux</p>
             <p>Scrum, Agile</p>
         </div>
