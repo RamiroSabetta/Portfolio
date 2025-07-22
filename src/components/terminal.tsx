@@ -6,6 +6,7 @@ const welcomeLines = [
     "¡Bienvenido a mi Portfolio Terminal!",
     "",
     "",
+    "",
     "Soy Ramiro Sabetta",
     "Desarrollador de Software",
     "",
@@ -18,9 +19,8 @@ const welcomeLines = [
 
 const AboutContent = () => (
   <div className="mt-1">
-    <p>Soy Ramiro Sabetta, un apasionado desarrollador de software con experiencia en la creación de aplicaciones web robustas y escalables.</p>
-    <p>Me especializo en tecnologías modernas como React, Next.js, Node.js y TypeScript.</p>
-    <p>Mi objetivo es transformar ideas complejas en soluciones de software elegantes y eficientes.</p>
+    <p>¡Hola, soy Ramiro y tengo 22 años! Me impulsa la búsqueda constante de soluciones eficientes, escalables y con impacto real.</p>
+    <p>Disfruto transformar ideas en sistemas funcionales, combinar lógica con creatividad y mantenerme siempre en evolución dentro del mundo IT.</p>
   </div>
 );
 
