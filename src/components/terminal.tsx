@@ -48,7 +48,7 @@ const ContactContent = () => (
     <div className="mt-1">
         <p>Email -&gt; <a href="mailto:sabettaramiro@gmail.com" className="underline">sabettaramiro@gmail.com</a></p>
         <p>GitHub -&gt; <a href="https://github.com/RamiroSabetta" target="_blank" rel="noopener noreferrer" className="underline">https://github.com/RamiroSabetta</a></p>
-        <p>LinkedIn - &gt; <a href="https://www.linkedin.com/in/ramiro-sabetta-336337324/" target="_blank" rel="noopener noreferrer" className="underline">https://www.linkedin.com/in/ramiro-sabetta-336337324/</a></p>
+        <p>LinkedIn -&gt; <a href="https://www.linkedin.com/in/ramiro-sabetta-336337324/" target="_blank" rel="noopener noreferrer" className="underline">https://www.linkedin.com/in/ramiro-sabetta-336337324/</a></p>
     </div>
 );
 const SkillsContent = () => (
