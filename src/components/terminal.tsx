@@ -9,7 +9,6 @@ const welcomeLines = [
     "Soy Ramiro Sabetta",
     "Desarrollador de Software",
     "",
-    "",
     "Escribe 'help' para ver la lista de comandos disponibles",
     "o 'about' para conocer más sobre mí.",
     "",
@@ -104,6 +103,7 @@ export function Terminal() {
     let initialLines: React.ReactNode[] = [];
     const addLine = (index: number) => {
         if(index < welcomeLines.length) {
+            const line = welcomeLines[index];
             initialLines = [...initialLines, <p key={`welcome-${index}`} className="whitespace-pre">{line}</p>];
             setHistory(initialLines);
             setTimeout(() => addLine(index + 1), 75);
