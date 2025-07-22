@@ -6,7 +6,6 @@ import React, { useState, useEffect, useRef } from "react";
 const welcomeLines = [
     "¡Bienvenido a mi Portfolio Terminal!",
     "",
-    "",
     "Soy Ramiro Sabetta",
     "Desarrollador de Software",
     "",
