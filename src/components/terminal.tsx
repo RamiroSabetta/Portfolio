@@ -16,9 +16,14 @@ const welcomeLines = [
 
 const WelcomeMessage = () => (
     <>
-        {welcomeLines.map((line, index) => (
+        {welcomeLines.slice(0, 4).map((line, index) => (
             <p key={`welcome-${index}`} className="whitespace-pre">{line}</p>
         ))}
+        <div className="pt-2">
+             {welcomeLines.slice(5, 8).map((line, index) => (
+                <p key={`welcome-help-${index}`} className="whitespace-pre">{line}</p>
+            ))}
+        </div>
     </>
 );
 
@@ -46,7 +51,18 @@ const HelpContent = () => (
     </div>
 );
 
-const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán here pronto. ¡Vuelve a consultar!</p>;
+const ProjectsContent = () => (
+    <div className="mt-1">
+        <p>Mis proyectos:</p>
+        <div className="mt-2">
+            <p>1. Landing Page Hostinger</p>
+            <div className="pl-4">
+                <p>Repo: <a href="https://github.com/RamiroSabetta/LandingPageHostinger" target="_blank" rel="noopener noreferrer" className="underline">https://github.com/RamiroSabetta/LandingPageHostinger</a></p>
+                <p>Web: <a href="https://ramirosabetta.github.io/LandingPageHostinger/" target="_blank" rel="noopener noreferrer" className="underline">Landing Page Hostinger</a></p>
+            </div>
+        </div>
+    </div>
+);
 const ContactContent = () => (
     <div className="mt-1">
         <p>Email -&gt; <a href="mailto:sabettaramiro@gmail.com" className="underline">sabettaramiro@gmail.com</a></p>
@@ -76,13 +92,15 @@ const SkillsContent = () => (
         <div className="mt-2">
             <p className="font-bold text-primary">Herramientas & Otros:</p>
             <p>Git, GitHub</p>
+            <p>Docker</p>
             <p>VS Code, Eclipse IDE</p>
             <p>Postman</p>
             <p>Vite</p>
             <p>WordPress</p>
             <p>Azure DevOps</p>
             <p>Filezilla</p>
-            <p>Windows, GNU/Linux</p>
+            <p>MS-Windows, GNU/Linux</p>
+            <p>Scrum, Agile</p>
         </div>
     </div>
 );
