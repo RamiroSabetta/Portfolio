@@ -3,18 +3,17 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const welcomeLines = [
-  "¡Bienvenido a mi Portfolio Terminal!",
-  "",
-  "",
-  "",
-  "Soy Ramiro Sabetta",
-  "Desarrollador de Software",
-  "",
-  "",
-  "",
-  "Escribe 'help' para ver la lista de comandos disponibles",
-  "o 'about' para conocer más sobre mí.",
-  "",
+    "¡Bienvenido a mi Portfolio Terminal!",
+    "",
+    "",
+    "Soy Ramiro Sabetta",
+    "Desarrollador de Software",
+    "",
+    "",
+    "",
+    "Escribe 'help' para ver la lista de comandos disponibles",
+    "o 'about' para conocer más sobre mí.",
+    "",
 ];
 
 const AboutContent = () => (
@@ -26,17 +25,22 @@ const AboutContent = () => (
 );
 
 const HelpContent = () => (
-  <div className="mt-1 grid grid-cols-[max-content_1fr] gap-x-4 gap-y-1">
-    <span className="text-primary">help</span><span>Muestra esta lista de comandos.</span>
-    <span className="text-primary">about</span><span>Muestra información sobre mí.</span>
-    <span className="text-primary">projects</span><span>Muestra mis proyectos. (Próximamente)</span>
-    <span className="text-primary">contact</span><span>Muestra información de contacto.</span>
-    <span className="text-primary">clear</span><span>Limpia la terminal.</span>
-  </div>
+    <div className="mt-1">
+        <p>Comandos disponibles:</p>
+        <div className="grid grid-cols-[max-content_auto] gap-x-4 gap-y-1 mt-1">
+            <span className="text-primary">about</span><span>→ Sobre mí</span>
+            <span className="text-primary">skills</span><span>→ Habilidades</span>
+            <span className="text-primary">projects</span><span>→ Proyectos</span>
+            <span className="text-primary">contact</span><span>→ Contacto</span>
+            <span className="text-primary">clear</span><span>→ Limpiar</span>
+            <span className="text-primary">help</span><span>→ Ayuda</span>
+        </div>
+    </div>
 );
 
 const ProjectsContent = () => <p className="mt-1">Mis proyectos se listarán aquí pronto. ¡Vuelve a consultar!</p>;
 const ContactContent = () => <p className="mt-1">Puedes contactarme en: <a href="mailto:ramiro.sabetta.dev@gmail.com" className="underline">ramiro.sabetta.dev@gmail.com</a></p>;
+const SkillsContent = () => <p className="mt-1">Mis habilidades se listarán aquí pronto. ¡Vuelve a consultar!</p>;
 
 
 export function Terminal() {
@@ -76,7 +80,7 @@ export function Terminal() {
     }
 
     const commandLine = (
-      <div key={`cmd-${history.length}`}>
+      <div key={`cmd-${history.length}`} className="mt-4">
         <span className="text-primary">visitor@portfolio:~$</span>
         <span className="ml-2">{command}</span>
       </div>
@@ -94,6 +98,9 @@ export function Terminal() {
         break;
       case 'contact':
         output = <ContactContent />;
+        break;
+      case 'skills':
+        output = <SkillsContent />;
         break;
       default:
         output = `bash: command not found: ${command}`;
