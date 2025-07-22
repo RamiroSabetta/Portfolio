@@ -5,11 +5,14 @@ import React, { useState, useEffect, useRef } from "react";
 const welcomeLines = [
   "¡Bienvenido a mi Portfolio Terminal!",
   "",
+  "",
   "Soy Ramiro Sabetta",
   "Desarrollador de Software",
   "",
+  "",
   "Escribe 'help' para ver la lista de comandos disponibles",
   "o 'about' para conocer más sobre mí.",
+  "",
 ];
 
 const AboutContent = () => (
