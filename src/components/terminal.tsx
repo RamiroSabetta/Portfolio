@@ -95,6 +95,7 @@ const SkillsContent = () => (
             <p>Azure DevOps, Filezilla</p>
             <p>MS-Windows, GNU/Linux</p>
             <p>Scrum, Agile</p>
+            <p>Trello</p>
         </div>
     </div>
 );
